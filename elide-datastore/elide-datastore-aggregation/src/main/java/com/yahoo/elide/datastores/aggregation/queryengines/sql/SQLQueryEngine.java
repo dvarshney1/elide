@@ -63,7 +63,7 @@ public class SQLQueryEngine extends QueryEngine {
     private final EntityManagerFactory entityManagerFactory;
     private final Consumer<EntityManager> transactionCancel;
     private final SQLReferenceTable referenceTable;
-
+    
     public SQLQueryEngine(MetaDataStore metaDataStore, EntityManagerFactory eMFactory, Consumer<EntityManager> txC) {
         super(metaDataStore);
         this.entityManagerFactory = eMFactory;
@@ -234,7 +234,8 @@ public class SQLQueryEngine extends QueryEngine {
      * @param query the client query.
      * @return the SQL query.
      */
-    private SQLQuery toSQL(Query query) {
+    @Override
+    public SQLQuery toSQL(Query query) {
         Set<ColumnProjection> groupByDimensions = new LinkedHashSet<>(query.getGroupByDimensions());
         Set<TimeDimensionProjection> timeDimensions = new LinkedHashSet<>(query.getTimeDimensions());
 

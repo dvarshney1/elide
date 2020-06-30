@@ -19,6 +19,7 @@ import com.yahoo.elide.datastores.aggregation.query.MetricProjection;
 import com.yahoo.elide.datastores.aggregation.query.Query;
 import com.yahoo.elide.datastores.aggregation.query.QueryResult;
 import com.yahoo.elide.datastores.aggregation.query.TimeDimensionProjection;
+import com.yahoo.elide.datastores.aggregation.queryengines.sql.query.SQLQuery;
 import com.yahoo.elide.request.Argument;
 
 import com.google.common.base.Functions;
@@ -193,4 +194,11 @@ public abstract class QueryEngine {
     public Table getTable(String classAlias) {
         return tables.get(classAlias);
     }
+
+    /**
+     * Returns the underlying SQL query
+     * @param query Query class object
+     * @return The SQl query.
+     */
+    public abstract SQLQuery toSQL(Query query);
 }
