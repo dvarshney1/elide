@@ -228,12 +228,6 @@ public class SQLQueryEngine extends QueryEngine {
         return tableVersion;
     }
 
-    /**
-     * Translates the client query into SQL.
-     *
-     * @param query the client query.
-     * @return the SQL query.
-     */
     @Override
     public SQLQuery toSQL(Query query) {
         Set<ColumnProjection> groupByDimensions = new LinkedHashSet<>(query.getGroupByDimensions());

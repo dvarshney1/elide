@@ -196,9 +196,9 @@ public abstract class QueryEngine {
     }
 
     /**
-     * Returns the underlying SQL query
-     * @param query Query class object
-     * @return The SQl query.
+     * Translates the client query into SQL.
+     * @param query the client query.
+     * @return the SQL query.
      */
     public abstract SQLQuery toSQL(Query query);
 }
