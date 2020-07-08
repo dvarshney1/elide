@@ -15,10 +15,10 @@ import com.yahoo.elide.datastores.aggregation.query.Query;
 import com.yahoo.elide.datastores.aggregation.query.QueryResult;
 import com.yahoo.elide.datastores.aggregation.queryengines.sql.query.SQLQuery;
 import com.yahoo.elide.request.EntityProjection;
+import com.yahoo.elide.request.Relationship;
 
 import com.google.common.annotations.VisibleForTesting;
 
-import com.yahoo.elide.request.Relationship;
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 

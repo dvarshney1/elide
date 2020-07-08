@@ -63,7 +63,6 @@ public class SQLQueryEngine extends QueryEngine {
     private final EntityManagerFactory entityManagerFactory;
     private final Consumer<EntityManager> transactionCancel;
     private final SQLReferenceTable referenceTable;
-    
     public SQLQueryEngine(MetaDataStore metaDataStore, EntityManagerFactory eMFactory, Consumer<EntityManager> txC) {
         super(metaDataStore);
         this.entityManagerFactory = eMFactory;
